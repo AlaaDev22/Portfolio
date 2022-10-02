@@ -1,0 +1,18 @@
+.skills{
+    &__list{
+        list-style: none;
+        color: $color-white;
+        margin-top: 3rem;
+        transform: translateY(-3rem);
+        &.js--animated {
+            @include animation(moveDown,0);
+        }
+    }
+    &__item{
+        display: inline-block;
+        font-size: $font-size-default;
+        &:not(:last-child){
+            margin: 0 1.5rem 2rem 0;
+        }
+    }
+}

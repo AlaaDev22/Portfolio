@@ -1,0 +1,31 @@
+.footer {
+    padding: 1rem 4rem;
+    background: linear-gradient(to right bottom, rgba($color-primary-blue-regular, .8), rgba($color-secondary-blue-regular, 1));
+    color: $color-white;
+    font-size: 1.4rem;
+    @include clearfix;
+    &__list {
+        list-style: none;
+        padding-top: 1rem;
+        float: left;
+    }
+    &__item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+    &__figure{
+        float: right;
+    }
+    &__img{
+        height: 4rem;
+        width: auto;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 1rem;
+    }
+    &__caption{
+        display: inline-block;
+    }
+}

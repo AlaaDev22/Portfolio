@@ -1,0 +1,18 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.1.1"
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "node-sass": "^4.8.3"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Rasheed Samawi",
+  "license": "ISC"
+}

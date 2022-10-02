@@ -1,0 +1,58 @@
+.form {
+    width: 60%;
+    transform: translateY(-3rem);
+    &.js--animated {
+        @include animation(moveDown, 0);
+    }
+    @include respond(tab-port) {
+        width: 90%;
+    }
+    &__group {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+    &__label {
+        position: absolute;
+        transform: translateY(.9rem);
+        font-size: 1.3rem;
+        color: $color-white;
+        font-weight: 400;
+        padding-left: 1.5rem;
+        display: block;
+        z-index: -1;
+        @include transition-regular;
+    }
+    &__input {
+        display: block;
+        padding: 1rem 1.5rem;
+        width: 65%;
+        border: none;
+        border-bottom: 4px solid transparent;
+        line-height: 1;
+        font-size: 1.3rem;
+        color: $color-primary-blue-regular;
+        z-index: 2000;
+        &::-webkit-input-placeholder {
+            color: $color-primary-blue-regular;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .3);
+            &:invalid {
+                border-bottom: 4px solid $color-red;
+            }
+        }
+        &:valid {
+            border-bottom: 4px solid $color-green;
+        }
+        &:placeholder-shown~.form__label {
+            transform: translateY(-3.5rem);
+        }
+        &--inline {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+}

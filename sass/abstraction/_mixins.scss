@@ -1,0 +1,88 @@
+@mixin transition-regular {
+    transition: all .2s ease-in-out;
+}
+
+@mixin boxshadow-regular {
+    box-shadow: 0 1rem 3rem rgba($color-black, .5);
+}
+
+@mixin box-center-abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin animation($animationName) {
+    animation: $animationName 1s ease-in-out forwards;
+    backface-visibility: hidden;
+}
+
+@mixin animation($animationName1, $animationName2) {
+    @if($animationName2==opacity) {
+        animation: $animationName1 1s ease-in-out forwards, $animationName2 1s ease-in-out forwards;
+        backface-visibility: hidden;
+    }
+    @else {
+        animation: $animationName1 1s ease-in-out forwards;
+        backface-visibility: hidden;
+    } 
+    
+}
+
+/* Responsive manager mixin 
+
+0 - 600 - phone
+600 - 900 - tab-port
+900 - 1200 - tab-land
+1200 - 1800 - here is where our style applies
+1800+ - big-desktop
+
+Order: base + typography > general layout + grid > page layout + components
+
+*/
+
+@mixin respond($breakpoint) {
+    @if($breakpoint==small-phone) {
+        @media (max-width: 20em) {
+            @content;
+        }
+    }
+    @if($breakpoint==phone) {
+        @media (max-width: 37.5em) {
+            //600px
+            @content;
+        }
+    }
+    @if($breakpoint==tab-port) {
+        @media (max-width: 56.25em) {
+            //900px
+            @content;
+        }
+    }
+    @if($breakpoint==tab-land) {
+        @media(max-width: 75em) {
+            //1200
+            @content;
+        }
+    }
+    @if($breakpoint==desktop) {
+        @media(min-width: 75em) {
+            //1200 - 1800
+            @content;
+        }
+    }
+    @if($breakpoint==desktop-big) {
+        @media(min-width: 112.5em) {
+            @content;
+        }
+    }
+}
