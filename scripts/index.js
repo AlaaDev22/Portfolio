@@ -13,15 +13,16 @@ $(document).ready(function () {
 
     //on page scroll
     $(window).scroll(function () {
-
         showToTopButton();
         animateHeadings();
     });
+
+    
+   
 });
 
 function showToTopButton() {
     $('.js--btn-top').css('opacity', (($(window).scrollTop() * 100) / $('html').height()) / 100);
-    console.log($(window).scrollTop() + " " + $('html').height());
 };
 
 function animateHeadings() {
@@ -45,9 +46,33 @@ function animateHeadings() {
 };
 
 // navigate to the top on click
-$('.js--btn-top').click(function () {
+$('.js--btn-top').on('click',function () {
+    animate(500);
+});
+
+$('.projects__item .anchor').on('click', function(evt){
+    //prevent navigation
+    evt.preventDefault();
+
+    //scroll to top
+    animate(0);
+    
+    //activate popup
+    $('.popup').addClass('active');
+    
+    //deactive scroll on body
+    $('body').css('overflow','hidden');
+
+    
+})
+
+$('.popup__close').on('click',function(){
+    $('.popup').removeClass('active');
+    $('body').css('overflow','scroll');
+})
+
+function animate(duration){
     $('html, body').animate({
         scrollTop: 0
-    }, 500);
-
-});
+    }, duration);
+}

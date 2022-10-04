@@ -88,6 +88,49 @@ button {
   font-family: inherit;
   line-height: inherit; }
 
+.popup.active .popup__shadow{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #000;
+    opacity: 0.8;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+}
+
+.popup.active .popup__content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 300px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  padding: 2rem;
+}
+
+.popup__close
+{
+  display: none;
+}
+
+.popup__close:hover{
+  cursor: pointer;
+}
+
+.popup.active .popup__close{
+  z-index: 10000;
+  color: #fff;
+  position: fixed;
+  font-size: 5rem;
+  right: 5rem;
+  top: 5rem;
+  display: block;
+}
+
 .heading {
   position: absolute;
   top: 65%;
@@ -408,7 +451,7 @@ button {
   width: 100%;
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  background: linear-gradient(to right bottom, rgba(35, 35, 42, 0.7), rgba(43, 43, 58, 0.7)), url(img/hero...jpg);
+  background: linear-gradient(to right bottom, rgba(35, 35, 42, 0.7), rgba(43, 43, 58, 0.432)), url(img/hero...jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -571,7 +614,7 @@ button {
 
 .section-contact {
   padding: 15rem 3rem 8rem 3rem;
-  background: linear-gradient(to right bottom, rgba(37, 69, 88, 0.7), rgba(43, 43, 58, 0.7)), url(img/contact-bg.jpg);
+  background: linear-gradient(to right bottom, rgba(37, 69, 88, 0.7), rgba(43, 43, 58, 0.295)), url(img/contact-bg.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 25vh, 100% 0, 100% 100%, 0 100%);
