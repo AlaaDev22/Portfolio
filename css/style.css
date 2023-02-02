@@ -433,7 +433,7 @@ button {
 
 .footer {
   padding: 1rem 4rem;
-  background: linear-gradient(to right bottom, #6b7b71, #121219);
+  background: linear-gradient(to right bottom, #292c2a, #121219);
   color: #fff;
   font-size: 1.4rem;
 }
@@ -520,7 +520,7 @@ button {
       rgba(35, 35, 42, 0.7),
       rgba(43, 43, 58, 0.432)
     ),
-    url(img/hero...jpg);
+    url("img/header-background.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -574,7 +574,7 @@ button {
   float: left;
 }
 .logo__img {
-  height: 6.5rem;
+  height: 20rem;
   width: auto;
   border-radius: 5px;
 }
@@ -640,7 +640,7 @@ button {
 
 .section-about {
   padding: 25rem 3rem;
-  background: linear-gradient(to right, #fcdebe 35%, #928779 95%);
+  background: linear-gradient(to right, #e6c06898 35%, #928779 95%);
   z-index: 1000;
 }
 @media (max-width: 56.25em) {
@@ -704,7 +704,7 @@ button {
 
 .section-skills {
   padding: 15rem 3rem;
-  background: linear-gradient(to right bottom, #6b7b71, #121219);
+  background: linear-gradient(to right bottom, #171717, #171717);
   transform: skewY(-7deg);
   margin-top: -15vh;
 }
@@ -714,7 +714,7 @@ button {
 
 .section-projects {
   padding: 15rem 3rem;
-  background: linear-gradient(to right bottom, #eaf4d3, #6b7b71);
+  background: linear-gradient(to right bottom, #e6c068b7 30%, #928779 95%);
   transform: skewY(-7deg);
 }
 .section-projects > * {
@@ -741,7 +741,7 @@ button {
   padding: 40rem 3rem 8rem 3rem;
   background: linear-gradient(
       to right bottom,
-      rgba(37, 69, 88, 0.7),
+      rgba(18, 31, 39, 0.7),
       rgba(43, 43, 58, 0.295)
     ),
     url(img/contact-bg.jpg);
@@ -796,7 +796,7 @@ button {
 .modal-link,
 .modal-link:hover,
 .modal-link:visited {
-    color: #fff;
+  color: #fff;
 }
 
 .modal-link {
@@ -824,7 +824,7 @@ button {
   color: white;
 }
 
-.contact__items li a svg{
+.contact__items li a svg {
   margin-right: 1rem;
 }
 
