@@ -811,6 +811,10 @@ button {
   color: white;
 }
 
+.contact__items {
+  margin-top: 3rem;
+}
+
 .contact__items li {
   color: white;
   font-size: 1.4rem;
